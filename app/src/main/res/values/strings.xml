@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Prologic VOD</string>
+    <string name="getThisApp">Get this App</string>
+    <string name="wouldLikeGetThisApp">Would you like to get this app?</string>
+    <string name="moreAppsTitle">More products</string>
+    <string name="decideToUpgrade">Upgrading?.. Great!</string>
+    <string name="upgradeNow">Upgrade now</string>
+    <string name="notNow">Not now</string>
+    <string name="restore">Restore purchases</string>
+    <string name="selectLesson">Select a lesson or chapter</string>
+    <string name="clickLesson">Click selected lesson again to enter it</string>
+    <string name="itemNotAviable">This item is available only after purchase</string>
+    <string name="downloadingCourse">Patience please... preparing learning items</string>
+    <string name="noInternet">Ooops! Please check your internet</string>
+    <string name="noInternetOK">OK</string>
+    <string name="wouldLikeUpgrade">Would you like to upgrade this product for</string>
+</resources>

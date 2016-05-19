@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/courseInfoGray"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="fitStart"
+            android:background="@null"
+            android:onClick="showInfo"
+            android:src="@drawable/chevron_black_up" />
+
+        <FrameLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/courseInfoImage"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#00000"
+                android:textColor="#000000"
+                android:background="@drawable/course_info_rounded_corners"
+                android:id="@+id/courseInfoMakat"
+                android:layout_gravity="bottom|right" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Course Name"
+            android:id="@+id/courseInfoName"
+            android:background="@color/courseInfoYellow"
+            android:textColor="#000000"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp" />
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            android:id="@+id/scrollView" >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <!--
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Course details headline"
+                    android:id="@+id/courseInfoDetailsHeadline"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:paddingBottom="5dp" />
+                -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details "
+                    android:id="@+id/courseInfoDetails"
+                    android:textColor="#000000" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>
