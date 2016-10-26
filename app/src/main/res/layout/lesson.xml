@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
     <LinearLayout
         android:orientation="vertical"
@@ -25,16 +26,47 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Select a lesson:"
+            android:textSize="@dimen/large_text"
+            android:text="@string/selectLesson"
             android:id="@+id/textView"
             android:textColor="#000000" />
 
-        <LinearLayout
-            android:orientation="horizontal"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/lessonsContainer"></LinearLayout>
+            android:layout_height="wrap_content"
+            android:id="@+id/lessonButtonsScrollView">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/lessonsContainer"
+                android:gravity="center"></LinearLayout>
+        </ScrollView>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/clickLesson"
+            android:id="@+id/selectItemText"
+            android:textColor="#000000"
+            android:textSize="@dimen/large_text"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/itemNotAviable"
+            android:id="@+id/itemNotAviableText"
+            android:textColor="#000000"
+            android:textSize="@dimen/large_text"
+            android:textAlignment="center"/>
+
+        </FrameLayout>
 
     </LinearLayout>
+
 </LinearLayout>

@@ -13,58 +13,84 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="fill_parent"
             android:background="#000000">
 
-            <LinearLayout
+            <FrameLayout
 
                 android:orientation="horizontal"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal">
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="3.5">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="מוצרים נוספים"
-                    android:id="@+id/textView2" />
+                    android:text="@string/moreAppsTitle"
+                    android:onClick="hideCourses"
+                    android:id="@+id/textView2"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/large_text"
+                    android:layout_marginRight="20dp"/>
 
                 <ImageButton
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="@dimen/icon_size"
+                    android:layout_height="@dimen/icon_size"
                     android:scaleType="fitStart"
                     android:background="@null"
-                    android:onClick="showCourses"
+                    android:onClick="hideCourses"
                     android:src="@drawable/chevron_yellow_up"
-                    android:id="@+id/imageButton2" />
-            </LinearLayout>
+                    android:id="@+id/imageButton2"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="70dp"/>
+            </FrameLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/coursesListScrollView"
+                android:focusable="false"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="450dp"
+                    android:id="@+id/coursesList">
+
+                </LinearLayout>
+            </ScrollView>
 
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="450dp"
-                android:id="@+id/coursesList"></LinearLayout>
+                android:layout_height="match_parent"
+                android:layout_weight="3">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="למעבר למוצר זה לחץ על הכפתור"
-                android:id="@+id/textView3"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="10dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wouldLikeGetThisApp"
+                    android:id="@+id/textView3"
+                    android:textSize="@dimen/medium_text"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:text="השג את המוצר הזה"
-                android:id="@+id/button"
-                android:layout_gravity="center_horizontal"
-                android:background="@drawable/border"
-                android:paddingRight="10dp"
-                android:paddingLeft="10dp"
-                android:onClick="getProduct" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="@string/getThisApp"
+                    android:id="@+id/button"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/border"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:onClick="getProduct"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/medium_text"
+                    android:layout_marginBottom="30dp"/>
+            </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>

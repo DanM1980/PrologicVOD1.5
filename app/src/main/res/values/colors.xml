@@ -5,4 +5,5 @@
     <color name="colorAccent">#FF4081</color>
     <color name="courseInfoYellow">#fffd38</color>
     <color name="courseInfoGray">#cccccc</color>
+    <color name="lessonWatchedIcon">#00ff00</color>
 </resources>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <LinearLayout
@@ -31,6 +32,7 @@
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:id="@+id/courseInfoImage"
+                android:onClick="showInfo"
                 android:layout_gravity="center_horizontal" />
 
             <TextView
@@ -40,13 +42,14 @@
                 android:textColor="#000000"
                 android:background="@drawable/course_info_rounded_corners"
                 android:id="@+id/courseInfoMakat"
+                android:textSize="@dimen/medium_text"
                 android:layout_gravity="bottom|right" />
         </FrameLayout>
 
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="@dimen/large_text"
             android:text="Course Name"
             android:id="@+id/courseInfoName"
             android:background="@color/courseInfoYellow"
@@ -58,30 +61,22 @@
         <ScrollView
             android:layout_width="wrap_content"
             android:layout_height="130dp"
-            android:id="@+id/scrollView" >
+            android:id="@+id/scrollView"
+            android:layout_margin="10dp" >
 
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="10dp">
+                android:layout_height="match_parent">
 
-                <!--
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Course details headline"
-                    android:id="@+id/courseInfoDetailsHeadline"
-                    android:textColor="#000000"
-                    android:textStyle="bold"
-                    android:paddingBottom="5dp" />
-                -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details Course details "
                     android:id="@+id/courseInfoDetails"
-                    android:textColor="#000000" />
+                    android:textColor="#000000"
+                    android:textSize="@dimen/medium_text"
+                    android:textDirection="anyRtl"/>
             </LinearLayout>
         </ScrollView>
     </LinearLayout>

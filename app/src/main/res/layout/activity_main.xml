@@ -2,13 +2,12 @@
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="#000000" >
+    android:layout_height="fill_parent">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:animateLayoutChanges="true"
         android:clipChildren="false"
         android:clipToPadding="false"
@@ -18,7 +17,7 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_margin="10dp"
             android:clipChildren="false"
             android:clipToPadding="false"
             android:gravity="center_horizontal">
@@ -29,23 +28,67 @@
                 android:layout_height="wrap_content"
                 android:clipChildren="false"
                 android:clipToPadding="false"
-                android:layout_weight="3">
+                android:layout_weight="5"
+                android:id="@+id/leftMenu">
 
-                <ImageButton
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:id="@+id/UpgradeButton"
-                    android:src="@drawable/basket_icon"
-                    android:clickable="true"
-                    android:scaleType="fitXY"
-                    android:background="@null"
-                    android:onClick="showUpgrade"
-                    android:layout_gravity="right"
-                    android:layout_marginBottom="10dp" />
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
 
+                    <ImageButton
+                        android:layout_width="@dimen/icon_size"
+                        android:layout_height="@dimen/icon_size"
+                        android:id="@+id/pdfNext"
+                        android:src="@drawable/pdf_more_icon"
+                        android:clickable="true"
+                        android:scaleType="fitXY"
+                        android:background="@null"
+                        android:onClick="pdfNext"
+                        android:layout_gravity="right"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone"/>
+
+                    <ImageButton
+                        android:layout_width="@dimen/icon_size"
+                        android:layout_height="@dimen/icon_size"
+                        android:id="@+id/UpgradeButton"
+                        android:src="@drawable/basket_icon"
+                        android:clickable="true"
+                        android:scaleType="fitXY"
+                        android:background="@null"
+                        android:onClick="showUpgrade"
+                        android:layout_gravity="right"
+                        android:layout_marginBottom="10dp" />
+
+                    <ImageButton
+                        android:layout_width="@dimen/icon_size"
+                        android:layout_height="@dimen/icon_size"
+                        android:id="@+id/UpgradeCloseButton"
+                        android:src="@drawable/chevron_yellow_left"
+                        android:clickable="true"
+                        android:scaleType="fitXY"
+                        android:background="@null"
+                        android:onClick="showUpgrade"
+                        android:layout_gravity="right"
+                        android:visibility="invisible"
+                        android:layout_marginBottom="10dp" />
+
+                    <ImageButton
+                        android:layout_width="@dimen/icon_size"
+                        android:layout_height="@dimen/icon_size"
+                        android:id="@+id/purchedIcon"
+                        android:src="@drawable/purchesed_icon"
+                        android:clickable="true"
+                        android:scaleType="fitXY"
+                        android:background="@null"
+                        android:layout_gravity="right"
+                        android:visibility="invisible"
+                        android:layout_marginBottom="10dp" />
+
+                </FrameLayout>
                 <ImageButton
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="@dimen/icon_size"
+                    android:layout_height="@dimen/icon_size"
                     android:id="@+id/pdfButton"
                     android:src="@drawable/pdf_icon"
                     android:clickable="true"
@@ -63,16 +106,34 @@
                 android:clipToPadding="false"
                 android:layout_weight="1">
 
-                <ImageButton
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:id="@+id/lessonsButton"
-                    android:src="@drawable/chevron_yellow_down"
-                    android:scaleType="fitStart"
-                    android:layout_gravity="center"
-                    android:background="@null"
-                    android:onClick="showLesson"
-                    android:textAlignment="center" />
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="showLesson">
+
+                    <ImageButton
+                        android:layout_width="@dimen/icon_size"
+                        android:layout_height="@dimen/icon_size"
+                        android:id="@+id/hideLessonsButton"
+                        android:src="@drawable/chevron_yellow_up"
+                        android:scaleType="fitStart"
+                        android:layout_gravity="center"
+                        android:background="@null"
+                        android:onClick="showLesson"
+                        android:textAlignment="center" />
+
+                    <ImageButton
+                        android:layout_width="@dimen/icon_size"
+                        android:layout_height="@dimen/icon_size"
+                        android:id="@+id/showLessonsButton"
+                        android:src="@drawable/chevron_yellow_down"
+                        android:scaleType="fitStart"
+                        android:layout_gravity="center"
+                        android:background="#000000"
+                        android:onClick="showLesson"
+                        android:textAlignment="center" />
+
+                </FrameLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -81,12 +142,13 @@
                 android:layout_height="wrap_content"
                 android:weightSum="1"
                 android:clipChildren="false"
+                android:id="@+id/rightMenu"
                 android:clipToPadding="false"
-                android:layout_weight="3">
+                android:layout_weight="5">
 
                 <ImageButton
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="@dimen/icon_size"
+                    android:layout_height="@dimen/icon_size"
                     android:id="@+id/infoButton"
                     android:src="@drawable/info_icon"
                     android:clickable="true"
@@ -97,10 +159,10 @@
                     android:onClick="showInfo" />
 
                 <ImageButton
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="@dimen/icon_size"
+                    android:layout_height="@dimen/icon_size"
                     android:id="@+id/appsButton"
-                    android:src="@drawable/apps_icon"
+                    android:src="@drawable/courses_icon"
                     android:clickable="true"
                     android:scaleType="fitXY"
                     android:background="@null"
@@ -110,127 +172,63 @@
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:gravity="center_horizontal">
+            android:layout_height="wrap_content">
+            <include layout="@layout/vimeo_player"/>
+        </LinearLayout>
 
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="fill_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="6">
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center">
-
-                    <ImageView
-                        android:layout_width="15dp"
-                        android:layout_height="15dp"
-                        android:id="@+id/video_corner_tl"
-                        android:src="@drawable/corner_tl" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center|bottom">
-
-                    <ImageView
-                        android:layout_width="15dp"
-                        android:layout_height="15dp"
-                        android:id="@+id/video_corner_bl"
-                        android:src="@drawable/corner_bl" />
-                </LinearLayout>
-            </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/lessonTextContainerLayout"
+            android:layout_margin="0dp">
 
             <FrameLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
-
-                <VideoView
-                    android:layout_width="fill_parent"
-                    android:layout_height="180dp"
-                    android:id="@+id/videoView"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_weight="1" />
-
-                <ImageView
-                    android:layout_width="fill_parent"
-                    android:layout_height="180dp"
-                    android:id="@+id/videoThumbnail"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="10dp" />
-
-                <ImageButton
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:id="@+id/playVideoButton"
-                    android:layout_gravity="center"
-                    android:clickable="true"
-                    android:scaleType="fitXY"
-                    android:background="@null"
-                    android:onClick="playVideo"
-                    android:src="@drawable/play_icon"
-                    />
-
-            </FrameLayout>
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="fill_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="6">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
                 <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center">
-
-                    <ImageView
-                        android:layout_width="15dp"
-                        android:layout_height="15dp"
-                        android:id="@+id/video_corner_tr"
-                        android:src="@drawable/corner_tr" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:gravity="center|bottom">
-
-                    <ImageView
-                        android:layout_width="15dp"
-                        android:layout_height="15dp"
-                        android:id="@+id/video_corner_br"
-                        android:src="@drawable/corner_br" />
+                    android:background="#000000"
+                    android:alpha="0.5">
                 </LinearLayout>
 
-            </LinearLayout>
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lessonTextScrollView"
+                    android:padding="20dp"
+                    android:layout_marginBottom="20dp">
 
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/lessonTextLayout">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/large_text"
+                            android:text="Lesson Name"
+                            android:id="@+id/lessonName"
+                            android:textColor="#ffffff"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lesson Description"
+                            android:id="@+id/lessonDescription"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/medium_text"/>
+                    </LinearLayout>
+                </ScrollView>
+            </FrameLayout>
         </LinearLayout>
-    </LinearLayout>
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/backLayer"
-        android:background="#ffffff"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:padding="10dp"
-        android:visibility="gone" />
+    </LinearLayout>
 
 </FrameLayout>

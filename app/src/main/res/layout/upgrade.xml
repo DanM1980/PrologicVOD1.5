@@ -4,17 +4,18 @@
     android:layout_height="match_parent">
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="wrap_content"
+        android:layout_width="230dp"
         android:layout_height="wrap_content"
         android:padding="20dp"
         android:background="@drawable/border"
         android:id="@+id/upgradeLayout"
-        android:layout_marginLeft="-1dp">
+        android:layout_marginLeft="-2dp"
+        android:gravity="center">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="@dimen/large_text"
             android:text="@string/decideToUpgrade"
             android:id="@+id/upgradeTextView"
             android:textColor="#ffffff"
@@ -22,34 +23,61 @@
             android:textStyle="bold" />
 
         <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:id="@+id/upgradeCourseImage"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="20dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Would you like to upgrade\nthis product for 4.99$?"
-            android:id="@+id/coursePriceText"
-            android:textColor="#ffffff" />
+            android:text="@string/wouldLikeUpgrade"
+            android:id="@+id/upgradeCoursePrice"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/medium_text"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Course Name"
+            android:id="@+id/upgradeCourseName"
+            android:textColor="#ffffff"
+            android:textAlignment="center"
+            android:textSize="@dimen/medium_text"
+            android:layout_margin="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="upgradeCourseText"
+            android:id="@+id/upgradeCourseText"
+            android:textColor="#ffffff"
+            android:textAlignment="center"
+            android:textSize="@dimen/medium_text"
+            android:layout_marginBottom="50dp"/>
 
         <Button
             android:layout_width="fill_parent"
             android:layout_height="30dp"
             android:text="@string/upgradeNow"
             android:id="@+id/upgradeButton"
+            android:onClick="upgradeNow"
             android:background="@drawable/border"
             android:layout_marginTop="10dp"
+            android:textSize="@dimen/medium_text"
             android:textAllCaps="false" />
 
         <Button
             android:layout_width="fill_parent"
             android:layout_height="30dp"
             android:text="@string/notNow"
+            android:onClick="showUpgrade"
             android:id="@+id/upgradeCancelButton"
             android:background="@drawable/border"
             android:layout_marginTop="10dp"
+            android:textSize="@dimen/medium_text"
             android:textAllCaps="false" />
 
         <Button
@@ -59,6 +87,8 @@
             android:id="@+id/upgradeRestore"
             android:background="@drawable/border"
             android:layout_marginTop="10dp"
+            android:onClick="restorePurchases"
+            android:textSize="@dimen/medium_text"
             android:textAllCaps="false" />
     </LinearLayout>
 </LinearLayout>

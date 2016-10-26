@@ -1,4 +1,4 @@
-package com.prologdigital.prologicvod;
+package com.prologdigital.prologvod;
 
 import org.junit.Test;
 

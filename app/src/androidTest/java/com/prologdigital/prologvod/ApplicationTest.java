@@ -1,4 +1,4 @@
-package com.prologdigital.prologicvod;
+package com.prologdigital.prologvod;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

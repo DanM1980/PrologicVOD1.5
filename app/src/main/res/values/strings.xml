@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Prologic VOD</string>
+    <string name="app_name">PrologVOD</string>
     <string name="getThisApp">Get this App</string>
     <string name="wouldLikeGetThisApp">Would you like to get this app?</string>
     <string name="moreAppsTitle">More products</string>
@@ -11,7 +11,9 @@
     <string name="clickLesson">Click selected lesson again to enter it</string>
     <string name="itemNotAviable">This item is available only after purchase</string>
     <string name="downloadingCourse">Patience please... preparing learning items</string>
+    <string name="loadingVideo">Patience please... preparing lesson video</string>
+    <string name="loadingPDF">Patience please... preparing PDF file</string>
     <string name="noInternet">Ooops! Please check your internet</string>
     <string name="noInternetOK">OK</string>
-    <string name="wouldLikeUpgrade">Would you like to upgrade this product for</string>
+    <string name="wouldLikeUpgrade">Would you like to upgrade\nthis product for</string>
 </resources>

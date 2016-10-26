@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1038909593161",
+    "firebase_url": "https://new-project-fa727.firebaseio.com",
+    "project_id": "new-project-fa727",
+    "storage_bucket": "new-project-fa727.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1038909593161:android:b01bd067d605ee5f",
+        "android_client_info": {
+          "package_name": "com.prologdigital.prologvod"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1038909593161-l9ao7b0eef1etm1105bmvponc2gr93i7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUTw0EhcVbDzzriL_2PbclSBNzfEB5eB8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

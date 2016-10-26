@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <bool name="fullApp">false</bool>
     <integer-array name="prologIDs">
         <item>35</item>
+        <item>13</item>
+        <item>14</item>
         <item>264</item>
         <item>165</item>
         <item>160</item>
         <item>236</item>
         <item>192</item>
+        <item>116</item>
+        <item>117</item>
+        <item>118</item>
     </integer-array>
+    <integer name="defaultCourseId">35</integer>
     <bool name="showMoreAppsAfterSplash">true</bool>
     <bool name="showBanner">true</bool>
     <string name="bannerLink">http://www.prologdigital.com/</string>
-    <bool name="RTL">false</bool>
+    <string name="language">ar</string>
+    <bool name="RTL">true</bool>
     <string name="appleIDforRating">1076158390</string>
 </resources>
